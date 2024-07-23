@@ -364,7 +364,7 @@ export default function App() {
                       <BarChart layout={'vertical'} accessibilityLayer data={Object.entries(versionRequestStats.requests).map(([ type, data ]) => ({
                         type,
                         total: data.reduce((acc, data) => acc + data.total, 0)
-                      }))}>
+                      })).sort((a, b) => b.total - a.total)}>
                         <CartesianGrid vertical={true} horizontal={false} />
                         <YAxis dataKey={'type'} type={'category'} width={96} />
                         <XAxis type={'number'} />
