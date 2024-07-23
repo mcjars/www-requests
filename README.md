@@ -1,22 +1,15 @@
-# www - Minecraft Jar Downloading/Lookup Website
+# www-versions - Minecraft Jar Request Analytic Site
 
-www is a explorer-like website for downloading Minecraft server versions. It allows you to easily download, install, and lookup versions of the Minecraft server software and their Configs.
-
-## Features
-
-- API Ran on Cloudflare Workers
-- Installation Instructions for Forge/Fabric/...
-- Use Zips for Forge installations instead of installers
-- Lookup Configs or Jars by dragging them in and comparing
+www-versions is an explorer-like website for viewing analytics on Minecraft server versions. It allows you to easily view, compare, and analyze versions of the Minecraft server softwares.
 
 ## Developing
 
 To Develop on this website, you need to install all required dependencies
 
 ```bash
-git clone https://github.com/mcjars/www.git mcjars-www
+git clone https://github.com/mcjars/www-requests.git mcjars-www-requests
 
-cd mcjars-www
+cd mcjars-www-requests
 
 # make sure to have nodejs installed already
 npm i -g pnpm
