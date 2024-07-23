@@ -270,7 +270,7 @@ export default function App() {
                             <YAxis dataKey={'day'} type={'category'} />
                             <XAxis type={'number'} />
                             <ChartTooltip content={<ChartTooltipContent />} />
-                            <Bar minPointSize={2} barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
+                            <Bar barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
                           </BarChart>
                         </ChartContainer>
                       </>
@@ -292,7 +292,7 @@ export default function App() {
                             <YAxis dataKey={'version'} type={'category'} />
                             <XAxis type={'number'} />
                             <ChartTooltip content={<ChartTooltipContent />} />
-                            <Bar minPointSize={2} barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
+                            <Bar barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
                           </BarChart>
                         </ChartContainer>
                       </>
@@ -373,7 +373,7 @@ export default function App() {
                         <YAxis dataKey={'type'} type={'category'} width={96} />
                         <XAxis type={'number'} />
                         <ChartTooltip content={<ChartTooltipContent />} />
-                        <Bar minPointSize={2} barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
+                        <Bar barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
                       </BarChart>
                     </ChartContainer>
                   ) : (
@@ -419,7 +419,7 @@ export default function App() {
                       <YAxis width={96} dataKey={'type'} type={'category'} />
                       <XAxis type={'number'} />
                       <ChartTooltip content={<ChartTooltipContent />} />
-                      <Bar minPointSize={2} barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
+                      <Bar barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
                     </BarChart>
                   </ChartContainer>
                 </>
