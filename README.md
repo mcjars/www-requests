@@ -1,6 +1,6 @@
-# www-versions - Minecraft Jar Request Analytic Site
+# www-requests - Minecraft Jar Request Analytic Site
 
-www-versions is an explorer-like website for viewing analytics on Minecraft server versions. It allows you to easily view, compare, and analyze versions of the Minecraft server softwares.
+www-requests is an explorer-like website for viewing analytics on Minecraft server versions. It allows you to easily view, compare, and analyze versions of the Minecraft server softwares.
 
 ## Developing
 
