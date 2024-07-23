@@ -41,7 +41,7 @@ export default function App() {
   )
 
   const { data: versions, isValidating: validatingVersions } = useSWR(
-    ['versions', 'VANILLA'],
+    ['versions', 'VANILLA', type !== 'VANILLA'],
     () => type ? apiGetVersions('VANILLA') : undefined,
     { revalidateOnFocus: false, revalidateIfStale: false }
   )
