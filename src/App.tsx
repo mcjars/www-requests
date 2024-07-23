@@ -419,7 +419,7 @@ export default function App() {
                       total: data.total
                     })).sort((a, b) => b.total - a.total)}>
                       <CartesianGrid vertical={true} horizontal={false} />
-                      <YAxis dataKey={'type'} type={'category'} />
+                      <YAxis width={96} dataKey={'type'} type={'category'} />
                       <XAxis type={'number'} />
                       <ChartTooltip content={<ChartTooltipContent />} />
                       <Bar minPointSize={2} barSize={32} dataKey={'total'} fill={'#2563eb'} radius={4} />
