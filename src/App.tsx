@@ -377,28 +377,21 @@ export default function App() {
                       <BarChart layout={'vertical'} accessibilityLayer data={Object.values(versionRequestStats.requests)[0].map((day) => ({
                         day: day.day,
                         ...Object.fromEntries(Object.keys(versionRequestStats.requests).map((type) => [
-                          type, versionRequestStats.requests[type].find((d) => d.day === day.day)?.total ?? 0
+                          type, versionRequestStats.requests[type].find((d) => d.day === day.day)?.total || null
                         ]))
                       }))}>
                         <CartesianGrid vertical={true} horizontal={false} />
                         <YAxis dataKey={'day'} type={'category'} />
                         <XAxis type={'number'} />
                         <ChartTooltip content={<ChartTooltipContent />} />
-                        {types.map((type, i) => (
+                        {types.map((type) => (
                           <Bar
                             key={type.name}
                             stackId={'types'}
-                            minPointSize={2}
                             barSize={32}
                             dataKey={type.name.toUpperCase()}
                             fill={type.color}
-                            radius={
-                              i === 0
-                                ? [4, 0, 0, 4]
-                                : i === Object.keys(versionRequestStats.requests).length - 1
-                                ? [0, 4, 4, 0]
-                                : 1
-                            }
+                            radius={2}
                           />
                         ))}
                       </BarChart>
