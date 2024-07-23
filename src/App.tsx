@@ -86,6 +86,10 @@ export default function App() {
     }
   }, [ version, view ])
 
+  useEffect(() => {
+    if (version) setType(undefined)
+  }, [ version ])
+
   return (
     <>
       <nav className={'flex flex-row items-center justify-between px-4 py-2 border-b-2 border-x-2 rounded-b-xl w-full max-w-7xl h-16 mx-auto'}>
