@@ -40,7 +40,7 @@ export default function App() {
     { revalidateOnFocus: false, revalidateIfStale: false }
   )
 
-  const { data: versions, isValidating: validatingVersions } = useSWR(
+  const { data: versions } = useSWR(
     ['versions', 'VANILLA', type !== 'VANILLA'],
     () => type ? apiGetVersions('VANILLA') : undefined,
     { revalidateOnFocus: false, revalidateIfStale: false }
@@ -115,7 +115,7 @@ export default function App() {
       </nav>
       <main className={'p-4 pt-0 grid xl:grid-cols-8 xl:grid-rows-1 grid-rows-8 gap-2 w-full h-[calc(100vh-5rem)] max-w-7xl mx-auto'}>
         <div className={'flex flex-col xl:col-span-2 xl:row-span-1 row-span-2 overflow-scroll xl:h-[calc(100vh-5rem)]'}>
-          {!validatingVersions && versions && types ? (
+          {versions && types ? (
             <>
               {versions.some((v) => v.type === 'SNAPSHOT') && (
                 <Button
