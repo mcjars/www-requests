@@ -88,7 +88,14 @@ export default function App() {
 
   useEffect(() => {
     if (version) setType(undefined)
+    else setType(types?.[0].identifier)
   }, [ version ])
+
+  useEffect(() => {
+    const name = types?.find((t) => t.identifier === type)?.name
+
+    document.title = `MCJars Requests - ${name ?? version}`
+  }, [ types, type, version ])
 
   return (
     <>
