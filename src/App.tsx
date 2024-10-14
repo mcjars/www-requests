@@ -50,7 +50,7 @@ export default function App() {
     if (types && !type) {
       setType(types[0].identifier)
     }
-  }, [ types ])
+  }, [ types, type ])
 
   useEffect(() => {
     if (!year) setYear(new Date().getFullYear())
@@ -88,8 +88,8 @@ export default function App() {
 
   useEffect(() => {
     if (version) setType(undefined)
-    else setType(types?.[0].identifier)
-  }, [ version ])
+    else setType(type ?? types?.[0].identifier)
+  }, [ version, type ])
 
   useEffect(() => {
     const name = types?.find((t) => t.identifier === type)?.name
